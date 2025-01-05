@@ -18,4 +18,4 @@ with st.expander('Data'):
   y_raw
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x='High_Bp', y='BMI', color='Diabetes_binary')
+  st.scatter_chart(data=df, x='HighBp', y='BMI', color='Diabetes_binary')
