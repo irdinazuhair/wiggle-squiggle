@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('🎈JomPredict')
+st.title('🎈NexusGo')
 
 st.write('This is an app testing for Assignment CPT316!')
 
