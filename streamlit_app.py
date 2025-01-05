@@ -16,3 +16,6 @@ with st.expander('Data'):
   st.write('Y')
   y_raw = df.Diabetes_binary
   y_raw
+
+with st.expander('Data Visualization'):
+  st.scatter_chart(data=df, x='High_Bp', y='BMI', color='Diabetes_binary')
