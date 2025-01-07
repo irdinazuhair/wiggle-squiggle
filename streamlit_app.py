@@ -10,9 +10,9 @@ with st.expander('Data'):
   df
 
   st.write('**X**')
-  x_raw = df.drop('Diabetes_binary', axis=1)
+  x_raw = df.drop('AtRiskOfOrExperiencingHomelessnessFlag', axis=1)
   x_raw
 
   st.write('Y')
-  y_raw = df.Diabetes_binary
+  y_raw = df.AtRiskOfOrExperiencingHomelessnessFlag
   y_raw
