@@ -1,7 +1,7 @@
 import streamlit as st
 import pandas as pd
 
-st.title('🎈NexusGo')
+st.title('🌱ThinkTankers Model')
 
 st.write('This is an app testing for Assignment CPT316!')
 
@@ -16,6 +16,3 @@ with st.expander('Data'):
   st.write('Y')
   y_raw = df.Diabetes_binary
   y_raw
-
-with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x='HighBp', y='BMI', color='Diabetes_binary')
