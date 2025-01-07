@@ -16,3 +16,6 @@ with st.expander('Data'):
   st.write('Y')
   y_raw = df.AtRiskOfOrExperiencingHomelessnessFlag
   y_raw
+
+with st.expander('Data Visualization'):
+  st.scatter_chart(data=df, x='PeopleonApplication', y='FamilyType', color='AtRiskOfOrExperiencingHomelessnessFlag')
