@@ -6,7 +6,7 @@ st.title('🎈NexusGo')
 st.write('This is an app testing for Assignment CPT316!')
 
 with st.expander('Data'):
-  df = pd.read_csv("https://raw.githubusercontent.com/AleeyaHayfa/shiny-broccoli/refs/heads/master/diabetes_binary_5050split_health_indicators_BRFSS2015.csv")
+  df = pd.read_csv("https://raw.githubusercontent.com/AleeyaHayfa/shiny-broccoli/refs/heads/master/Social_Housing_cleaned.csv")
   df
 
   st.write('**X**')
