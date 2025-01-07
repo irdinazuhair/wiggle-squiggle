@@ -3,7 +3,7 @@ import pandas as pd
 
 st.title('🌱ThinkTankers Model')
 
-st.write('This is an app testing for Assignment CPT316!')
+st.write('This is model developement for Assignment CPT316!')
 
 with st.expander('Data'):
   df = pd.read_csv("https://raw.githubusercontent.com/AleeyaHayfa/shiny-broccoli/refs/heads/master/Social_Housing_cleaned.csv")
