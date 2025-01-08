@@ -67,7 +67,7 @@ input_row = df_house[:1] #use only first row
 
 # Encode y
 target_mapper = {'Yes': 1,
-                 'No': 0,
+                 'No': 0
                  }
 def target_encode(val):
   return target_mapper[val]
