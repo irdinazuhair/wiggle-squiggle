@@ -107,7 +107,7 @@ st.dataframe(df_prediction_proba,
              column_config={
                'Yes': st.column_config.ProgressColumn( #progressColumn tu ui macam slider
                  'Yes',
-                 format='%2f',
+                 format='%f',
                  width='medium',
                  #probability (0-1)
                  min_value=0,
@@ -115,7 +115,7 @@ st.dataframe(df_prediction_proba,
                ),
                'No': st.column_config.ProgressColumn(
                  'No',
-                 format='%2f',
+                 format='%f',
                  width='medium',
                  min_value=0,
                  max_value=1
