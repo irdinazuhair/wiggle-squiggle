@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
-st.title('ThinkTankers ML App')
+st.title('🤖 ThinkTankers ML App')
 
 st.write('This app builds a machine learning model')
 
