@@ -65,8 +65,7 @@ df_house = pd.get_dummies(input_details, prefix=encode)
 x = df_house[1:] #ignore first row but use everything after first row
 input_row = df_house[:1] #use only first row
 
-test = y_raw.unique()
-test
+
 
 # # Encode y
 # target_mapper = {'Yes': 1,
