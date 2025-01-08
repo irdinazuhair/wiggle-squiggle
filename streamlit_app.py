@@ -74,7 +74,7 @@ def target_encode(val):
 
 y = y_raw.apply(target_encode)
 #y #ni yang encoded
-#y_raw #compare dgn original nk tgk betul ke tak
+#y_raw # original
 
 with st.expander('Data preparation'):
   st.write('**Encoded X (input housing)**')
