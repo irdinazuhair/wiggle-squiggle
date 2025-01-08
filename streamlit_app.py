@@ -1,5 +1,5 @@
-from sklearn.feature_selection import SelectKBest, f_classif
 import pandas as pd
+import numpy as np
 import streamlit as st
 
 with st.expander('Data'):
