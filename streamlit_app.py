@@ -50,6 +50,7 @@ with st.sidebar:
          }
   input_df = pd.DataFrame(data, index=[0])
   input_details = pd.concat([input_df, x_raw], axis=0) #combine input features with penguin features
+  # input details is user input
 
 with st.expander('Input features'):
   st.write('**Input User**')
@@ -58,16 +59,16 @@ with st.expander('Input features'):
   input_details
 
 # # Encode X 
-# encode = ['island', 'sex'] #combine island and island name pastu classify 0 or 1 for each particular name
-# df_penguins = pd.get_dummies(input_penguins, prefix=encode)
+# encode = ['FamilyType', 'DisabilityApplicationFlag']
+# df_house = pd.get_dummies(input_details, prefix=encode)
 
-# x = df_penguins[1:] #ignore first row but use everything after first row
-# input_row = df_penguins[:1] #use only first row
+# x = df_house[1:] #ignore first row but use everything after first row
+# input_row = df_house[:1] #use only first row
 
 # # Encode y
-# target_mapper = {'Adelie': 0,
-#                  'Chinstrap': 1,
-#                  'Gentoo': 2}
+# target_mapper = {'Yes': 1,
+#                  'No': 0,
+#                  }
 # def target_encode(val):
 #   return target_mapper[val]
 
