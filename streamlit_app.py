@@ -52,7 +52,7 @@ with st.sidebar:
   input_details = pd.concat([input_df, x_raw], axis=0) #combine input features with penguin features
   # input details is user input
 
-with st.expander('Input features'):
+with st.expander('Input KENAPA NI features'):
   st.write('**Input User**')
   input_df
   st.write('**Combined Housing data**') #combine original dgn user input
