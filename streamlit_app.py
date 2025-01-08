@@ -36,18 +36,23 @@ with st.sidebar:
     'Couple Only Over 55', 
     'Other'
 ))
-  TotalPeople = st.slider('PeopleonApplication', 1.0, 12.0, 1.681)
-  TotalMonths = st.slider('MonthsonHousingRegister', 0.0, 239.0, 23.3)
-  DisabilityFlag = st.selectbox('DisabilityApplicationFlag', ('Yes', 'No'))
-  # 32.1 mininum, 59.6 maximum, 43.9 average (same as other)
+  DisabilityFlag = st.selectbox('Disability', ('Yes', 'No'))
+  TotalPeople = st.slider('Total People on application', 1.0, 12.0, 1.681)
+  TotalMonths = st.slider('Total months you have been register', 0.0, 239.0, 23.3)
+  # 1.0 mininum, 12.0 maximum, 1.681 average (same as other)
 
-#  # user input into dataframe
-# # Create a DataFrame for the input features
-#   data = {'island': island,
-#           'bill_length_mm': bill_length_mm,
-#           'bill_depth_mm': bill_depth_mm,
-#           'flipper_length_mm': flipper_length_mm,
-#           'body_mass_g': body_mass_g,
-#           'sex': gender}
-#   input_df = pd.DataFrame(data, index=[0])
-#   input_penguins = pd.concat([input_df, x_raw], axis=0) #combine input features with penguin features
+# user input into dataframe
+# Create a DataFrame for the input features
+  data = {'FamilyType': Family,
+          'MonthsonHousingRegister': TotalMonths,
+          'DisabilityApplicationFlag': DisabilityFlag,
+          'PeopleonApplication': TotalPeople,
+         }
+  input_df = pd.DataFrame(data, index=[0])
+  input_details = pd.concat([input_df, x_raw], axis=0) #combine input features with penguin features
+
+with st.expander('Input features'):
+  st.write('**Input User**')
+  input_df
+  st.write('**Combined Housing data**') #combine original dgn user input
+  input_details
