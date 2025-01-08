@@ -2,6 +2,10 @@ import pandas as pd
 import numpy as np
 import streamlit as st
 
+st.title('ThinkTankers ML App')
+
+st.write('This app builds a machine learning model')
+
 with st.expander('Data'):
     # Load the dataset
     df = pd.read_csv("https://raw.githubusercontent.com/AleeyaHayfa/shiny-broccoli/refs/heads/master/Social_Housing_cleaned.csv")
