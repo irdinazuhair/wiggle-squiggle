@@ -58,27 +58,27 @@ with st.expander('Input features'):
   st.write('**Combined Housing data**') #combine original dgn user input
   input_details
 
-# # Encode X 
-# encode = ['FamilyType', 'DisabilityApplicationFlag']
-# df_house = pd.get_dummies(input_details, prefix=encode)
+# Encode X 
+encode = ['FamilyType', 'DisabilityApplicationFlag']
+df_house = pd.get_dummies(input_details, prefix=encode)
 
-# x = df_house[1:] #ignore first row but use everything after first row
-# input_row = df_house[:1] #use only first row
+x = df_house[1:] #ignore first row but use everything after first row
+input_row = df_house[:1] #use only first row
 
-# # Encode y
-# target_mapper = {'Yes': 1,
-#                  'No': 0,
-#                  }
-# def target_encode(val):
-#   return target_mapper[val]
+# Encode y
+target_mapper = {'Yes': 1,
+                 'No': 0,
+                 }
+def target_encode(val):
+  return target_mapper[val]
 
-# y = y_raw.apply(target_encode)
-# #y #ni yang encoded
-# #y_raw #compare dgn original nk tgk betul ke tak
+y = y_raw.apply(target_encode)
+#y #ni yang encoded
+#y_raw #compare dgn original nk tgk betul ke tak
 
-# with st.expander('Data preparation'):
-#   st.write('**Encoded X (input penguin)**')
-#   input_row
-#   st.write('**Encoded y**')
-#   y
-#   y_raw #compare dgn original nk tgk betul ke tak
+with st.expander('Data preparation'):
+  st.write('**Encoded X (input housing)**')
+  input_row
+  st.write('**Encoded y**')
+  y
+  y_raw #compare dgn original nk tgk betul ke tak
