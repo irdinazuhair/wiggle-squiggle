@@ -37,8 +37,8 @@ with st.sidebar:
     'Other'
 ))
   DisabilityFlag = st.selectbox('Disability', ('Yes', 'No'))
-  TotalPeople = st.slider('Total People on application', 1.0, 12.0, 1.681)
-  TotalMonths = st.slider('Total months you have been register', 0.0, 239.0, 23.3)
+  TotalPeople = st.slider('Total People on application', 1, 12, 2)
+  TotalMonths = st.slider('Total months you have been register', 0, 239, 23)
   # 1.0 mininum, 12.0 maximum, 1.681 average (same as other)
 
 # user input into dataframe
