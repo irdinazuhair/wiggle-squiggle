@@ -85,43 +85,4 @@ with st.expander('Data preparation'):
   y
   # y_raw #compare dgn original nk tgk betul ke tak
 
-# Model training and inference
-## Train the ML model
-clf = RandomForestClassifier()
-clf.fit(x, y) #use fit function to train it
 
-## Apply model to make predictions
-prediction = clf.predict(input_row) #predict value, input_row is input features
-prediction_proba = clf.predict_proba(input_row) #do probability
-
-df_prediction_proba = pd.DataFrame(prediction_proba)
-df_prediction_proba.columns = ['Yes', 'No']
-df_prediction_proba.rename(columns={0: 'No',
-                                 1: 'Yes'
-                                 })
-#df_prediction_proba #to see if it works
-
-# Display predicted species
-st.subheader('Predicted Homelessness')
-st.dataframe(df_prediction_proba,
-             column_config={
-               'Yes': st.column_config.ProgressColumn( #progressColumn tu ui macam slider
-                 'Yes',
-                 format='%.2f',
-                 width='medium',
-                 #probability (0-1)
-                 min_value=0,
-                 max_value=1
-               ),
-               'No': st.column_config.ProgressColumn(
-                 'No',
-                 format='%.2f',
-                 width='medium',
-                 min_value=0,
-                 max_value=1
-               ),
-             }, hide_index=True)
-
-
-housing_homeless = np.array(['Yes', 'No'])
-st.success(str(housing_homeless[prediction][0]))
