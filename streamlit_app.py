@@ -18,4 +18,4 @@ with st.expander('Data'):
     st.write(y_raw)
 
 with st.expander('Data Visualization'):
-  st.scatter_chart(data=df, x='PeopleonApplication', y='ApplicationType', color='AtRiskOfOrExperiencingHomelessnessFlag')
+  st.scatter_chart(data=df, x='PeopleonApplication', y='FamilyType', color='AtRiskOfOrExperiencingHomelessnessFlag')
