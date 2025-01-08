@@ -10,8 +10,8 @@ with st.expander('Data'):
 
     # Separate features (X) and target (Y)
     st.write('**X (Features)**')
-    X_raw = df.drop('AtRiskOfOrExperiencingHomelessnessFlag', axis=1)
-    st.dataframe(X_raw)
+    x_raw = df.drop('AtRiskOfOrExperiencingHomelessnessFlag', axis=1)
+    st.dataframe(x_raw)
 
     st.write('**Y (Target)**')
     y_raw = df['AtRiskOfOrExperiencingHomelessnessFlag']
