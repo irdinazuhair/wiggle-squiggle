@@ -90,7 +90,7 @@ with st.expander('Data preparation'):
 
 # Model training
 clf = RandomForestClassifier()
-clf.fit(X_raw, y)
+clf.fit(X, y)
 
 ## Apply model to make predictions
 prediction = clf.predict(input_row)
