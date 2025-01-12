@@ -87,3 +87,13 @@ with st.expander('Data preparation'):
   st.write('**Encoded y**')
   y
   # y_raw #compare dgn original nk tgk betul ke tak
+
+# Model training
+clf = RandomForestClassifier()
+clf.fit(X_raw, y)
+
+## Apply model to make predictions
+prediction = clf.predict(input_row)
+predicition_probs = clf.predict_proba(input_row)
+
+prediction_proba
