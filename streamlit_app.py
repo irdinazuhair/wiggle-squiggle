@@ -53,7 +53,7 @@ with st.sidebar:
           'PeopleonApplication': TotalPeople,
          }
   input_df = pd.DataFrame(data, index=[0])
-  input_details = pd.concat([input_df, x_raw], axis=0) #combine input features with penguin features
+  input_details = pd.concat([input_df, x_raw], axis=0) #combine input features with housing features
   # input details is user input
 
 with st.expander('Input features'):
