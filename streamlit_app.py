@@ -108,14 +108,14 @@ df_prediction_proba.rename(columns= {1: 'Yes',
 st.subheader('Disability Prediction' )
 st.dataframe(df_prediction_proba,
              column_config={
-                'Yes'; st.column_config.ProgressColumn(
+                'Yes': st.column_config.ProgressColumn(
                     'Yes',
                      format='%f'
                      width= 'medium'
                      min_value=0,
                      max_value=1
                 ),
-                'No'; st.column_config.ProgressColumn(
+                'No': st.column_config.ProgressColumn(
                     'Yes',
                      format='%f'
                      width= 'medium'
