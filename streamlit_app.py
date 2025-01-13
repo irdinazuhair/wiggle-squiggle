@@ -144,7 +144,7 @@ with st.expander('Model Selection & Training'):
     st.write(f'Model Accuracy: {accuracy:.2f}')
 
 # Deployment: Prediction
-with st.expander('Risk of Homelessness Prediction'):
+with st.expander('Risk Of or Experiencing Homelessness Prediction'):
     df_prediction_proba = pd.DataFrame(prediction_proba, columns=['No', 'Yes'])
     st.write('Prediction Probabilities:')
     st.dataframe(df_prediction_proba.style.format({'No': '{:.2f}', 'Yes': '{:.2f}'}))
