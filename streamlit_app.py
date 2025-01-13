@@ -105,7 +105,7 @@ df_prediction_proba.rename(columns= {1: 'Yes',
 
 
 # Display predicted
-st.subheader('Disability Prediction' )
+st.subheader('Risk of Homelessness Prediction' )
 st.dataframe(df_prediction_proba,
              column_config={
                 'Yes': st.column_config.ProgressColumn(
@@ -116,7 +116,7 @@ st.dataframe(df_prediction_proba,
                      max_value=1
                 ),
                 'No': st.column_config.ProgressColumn(
-                    'Yes',
+                    'No',
                      format='%f',
                      width= 'medium',
                      min_value=0,
@@ -127,5 +127,5 @@ st.dataframe(df_prediction_proba,
 
 df_prediction_proba
 
-disability = np.array(['Yes', 'No'])
-st.success(str(disability[prediction][0]))
+homelessness = np.array(['Yes', 'No'])
+st.success(str(homelessness[prediction][0]))
